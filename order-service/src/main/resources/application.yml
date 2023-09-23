@@ -11,6 +11,7 @@ spring:
       server-addr: localhost:8848
       discovery:
         cluster-name: HZ # 集群名字
+        namespace: 7dc209c9-a2a1-4831-ae7b-47e0d7661697
   application:
     name: orderservice
 mybatis:
