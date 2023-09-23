@@ -9,6 +9,8 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+      discovery:
+        cluster-name: HZ # 集群名字
   application:
     name: orderservice
 mybatis:
@@ -20,3 +22,6 @@ logging:
     com.zhuzi: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+userservice:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则

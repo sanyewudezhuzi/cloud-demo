@@ -23,13 +23,4 @@ public class OrderApplication {
         return new RestTemplate();
     }
 
-    /**
-     * 自定义负载均衡：这种方式是全局的配置，无论以后访问哪个微服务都使用随机的方式
-     */
-    /* @Bean
-    public IRule iRule() {
-        System.out.println("选择随机的负载均衡规则");
-        return new RandomRule();
-    } */
-
 }

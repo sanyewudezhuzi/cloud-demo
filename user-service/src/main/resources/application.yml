@@ -9,6 +9,8 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+      discovery:
+        cluster-name: HZ # 设置集群的名字
   application:
     name: userservice
 mybatis:
