@@ -1,5 +1,6 @@
 package com.zhuzi.order.pojo;
 
+import com.zhuzi.pojo.User;
 import lombok.Data;
 
 @Data

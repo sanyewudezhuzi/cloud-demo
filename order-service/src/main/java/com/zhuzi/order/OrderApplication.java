@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @MapperScan("com.zhuzi.order.mapper")
 @SpringBootApplication
-@EnableFeignClients
+// @EnableFeignClients
 public class OrderApplication {
 
     public static void main(String[] args) {

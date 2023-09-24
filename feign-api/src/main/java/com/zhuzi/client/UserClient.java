@@ -1,7 +1,7 @@
-package com.zhuzi.order.client;
+package com.zhuzi.client;
 
-import com.zhuzi.order.config.DefaultFeignConfiguration;
-import com.zhuzi.order.pojo.User;
+import com.zhuzi.config.DefaultFeignConfiguration;
+import com.zhuzi.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

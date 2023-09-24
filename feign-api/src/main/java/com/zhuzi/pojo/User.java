@@ -1,4 +1,4 @@
-package com.zhuzi.order.pojo;
+package com.zhuzi.pojo;
 
 import lombok.Data;
 

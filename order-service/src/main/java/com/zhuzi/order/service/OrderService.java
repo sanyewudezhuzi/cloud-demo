@@ -1,9 +1,9 @@
 package com.zhuzi.order.service;
 
-import com.zhuzi.order.client.UserClient;
+import com.zhuzi.client.UserClient;
 import com.zhuzi.order.mapper.OrderMapper;
 import com.zhuzi.order.pojo.Order;
-import com.zhuzi.order.pojo.User;
+import com.zhuzi.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
