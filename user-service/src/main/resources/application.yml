@@ -6,14 +6,14 @@ spring:
     username: root
     password: abc123
     driver-class-name: com.mysql.jdbc.Driver
-  cloud:
-    nacos:
-      server-addr: localhost:8848
-      discovery:
-        cluster-name: HZ # 设置集群的名字
-        namespace: 7dc209c9-a2a1-4831-ae7b-47e0d7661697
-  application:
-    name: userservice
+#  cloud:
+#    nacos:
+#      server-addr: localhost:8848
+#      discovery:
+#        cluster-name: HZ # 设置集群的名字
+#        namespace: 7dc209c9-a2a1-4831-ae7b-47e0d7661697
+#  application:
+#    name: userservice
 mybatis:
   type-aliases-package: com.zhuzi.user.pojo
   configuration:

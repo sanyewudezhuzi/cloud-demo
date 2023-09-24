@@ -4,7 +4,11 @@ import com.zhuzi.user.pojo.User;
 import com.zhuzi.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Slf4j
 @RestController
@@ -24,4 +28,13 @@ public class UserController {
     public User queryById(@PathVariable("id") Long id) {
         return userService.queryById(id);
     }
+
+    @Value("${pattern.dateformat}")
+    private String dateformat;
+
+    @GetMapping("/now")
+    public String now() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateformat));
+    }
+
 }
