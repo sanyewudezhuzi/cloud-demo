@@ -1,0 +1,31 @@
+# 端口号（任意，此处设置为10010）
+server:
+  port: 10010
+# 服务名
+spring:
+  application:
+    name: gateway
+# nacos注册地址
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+# 网关配置
+    gateway:
+      routes:
+        - id: userservice
+          uri: lb://userservice
+          predicates:
+            - Path=/user/**
+
+          # 该过滤器只对当前路由生效
+          filters:
+            - AddRequestHeader=name,sanyewudezhuzi # 添加请求头
+
+        - id: orderservice
+          uri: lb://orderservice
+          predicates:
+            - Path=/order/**
+
+#      # 默认过滤器对全局生效
+#      default-filters:
+#        - AddRequestHeader=name,sanyewudezhuzi
