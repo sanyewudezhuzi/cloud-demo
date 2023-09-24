@@ -32,13 +32,14 @@ public class UserController {
         return userService.queryById(id);
     }
 
-    @Value("${pattern.dateformat}")
+    // 为了验证test开发环境，需要注释这段代码
+    /* @Value("${pattern.dateformat}")
     private String dateformat;
 
     @GetMapping("/now")
     public String now() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateformat));
-    }
+    } */
 
     @Autowired
     private PatternProperties patternProperties;
@@ -46,6 +47,11 @@ public class UserController {
     @GetMapping("/now2")
     public String now2() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(patternProperties.getDateformat()));
+    }
+
+    @GetMapping("/info")
+    public String info() {
+        return patternProperties.getEnvShareValue();
     }
 
 }

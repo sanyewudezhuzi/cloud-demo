@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-@ConfigurationProperties(prefix = "pattern") // 这个注解默认就是热更新
+@ConfigurationProperties(prefix = "pattern")
 public class PatternProperties {
     private String dateformat;
+    private String envShareValue; // 添加字段
 }
