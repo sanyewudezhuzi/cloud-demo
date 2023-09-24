@@ -9,9 +9,6 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
-#      discovery:
-#        cluster-name: HZ # 集群名字
-#        namespace: 7dc209c9-a2a1-4831-ae7b-47e0d7661697
   application:
     name: orderservice
 mybatis:
@@ -23,6 +20,10 @@ logging:
     com.zhuzi: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-#userservice:
-#  ribbon:
-#    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
+
+## feign日志配置
+#feign:
+#  client:
+#    config:
+#      default:
+#        loggerLevel: basic #  日志级别

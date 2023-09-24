@@ -1,12 +1,13 @@
 package com.zhuzi.order.client;
 
+import com.zhuzi.order.config.DefaultFeignConfiguration;
 import com.zhuzi.order.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 // 定义远程调用
-@FeignClient("userservice")
+@FeignClient(value = "userservice", configuration = DefaultFeignConfiguration.class)
 public interface UserClient {
 
     // 根据用户id获取用户对象数据
